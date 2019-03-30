@@ -11,7 +11,7 @@ def index(request):
     if username:
         return HttpResponse('Front main page!!!')
     else:
-        return redirect(reverse('login'))
+        return redirect(reverse('front:login'))
 
 
 def login(request):
