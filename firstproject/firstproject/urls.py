@@ -16,8 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from book import views
+from django.http import HttpResponse
+
+def index(request):
+    return HttpResponse("Main Page")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('book/', views.book)
+    path('', index),
+    path('book/', views.book),
+    # /book/detail/1/
+    path("book/detail/<book_id>/<category_id>/", views.book_detail)
 ]
