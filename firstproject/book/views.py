@@ -12,4 +12,7 @@ def book_detail(request, book_id, category_id):
     text = "您获取的图书id是： %s, category is: %s" % (book_id, category_id)
     return HttpResponse(text)
 
-
+def author_detail(request):
+    author_id = request.GET.get('id')
+    text = 'Author"s id is : %s' % author_id
+    return HttpResponse(text)
