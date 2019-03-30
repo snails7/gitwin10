@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
 from book import views
 from django.http import HttpResponse
 
@@ -28,5 +28,8 @@ urlpatterns = [
     # /book/detail/1/
     path("book/detail/<book_id>/<category_id>/", views.book_detail),
 
-    path('book/author/', views.author_detail)
+    path('book/author/', views.author_detail),
+
+    path('',include('front.urls')),
+    path('cms/', include('cms.urls')),
 ]
