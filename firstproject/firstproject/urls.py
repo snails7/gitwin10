@@ -23,7 +23,7 @@ def index(request):
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index),
+    # path('', index),
     path('book/', views.book),
     # /book/detail/1/
     path("book/detail/<book_id>/<category_id>/", views.book_detail),
