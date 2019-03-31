@@ -19,6 +19,11 @@ from django.template.loader import render_to_string
 # def login(request):
 #     return HttpResponse("Front login page")
 
+#def index(request):
+#    html = render_to_string("index.html")
+#    return HttpResponse(html)
+
+from django.shortcuts import render
+
 def index(request):
-    html = render_to_string("index.html")
-    return HttpResponse(html)
+    return render(request, 'index.html')
