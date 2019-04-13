@@ -36,8 +36,10 @@ Including another URLconf
 
 
 from django.urls import path
-from front  import views
+#from front import views
+from . import views
+
 
 urlpatterns = [
-    path('', views.index)
+    path('', views.index),
 ]
